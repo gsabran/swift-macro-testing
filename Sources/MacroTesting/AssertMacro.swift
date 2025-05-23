@@ -471,22 +471,20 @@ extension FixIt.Change {
         replacement: newTrivia.description
       )
 
-    #if canImport(SwiftSyntax601)
-      case .replaceChild(let replacingChildData):
-        let range = replacingChildData.replacementRange
-        let start = expansionContext.position(
-          of: range.lowerBound,
-          anchoredAt: replacingChildData.parent
-        )
-        let end = expansionContext.position(
-          of: range.upperBound,
-          anchoredAt: replacingChildData.parent
-        )
-        return SourceEdit(
-          range: start..<end,
-          replacement: replacingChildData.newChild.description
-        )
-    #endif
+    case .replaceChild(let replacingChildData):
+      let range = replacingChildData.replacementRange
+      let start = expansionContext.position(
+        of: range.lowerBound,
+        anchoredAt: replacingChildData.parent
+      )
+      let end = expansionContext.position(
+        of: range.upperBound,
+        anchoredAt: replacingChildData.parent
+      )
+      return SourceEdit(
+        range: start..<end,
+        replacement: replacingChildData.newChild.description
+      )
     }
   }
 }
