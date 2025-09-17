@@ -17,7 +17,7 @@ let package = Package(
     )
   ],
   dependencies: [
-    .package(url: "https://github.com/pointfreeco/swift-snapshot-testing", from: "1.18.0"),
+    .package(url: "https://github.com/gsabran/swift-snapshot-testing", revision: "88c057fd683691f5e6412136b5de4a3f94f56716"),
     .package(url: "https://github.com/swiftlang/swift-syntax", "509.0.0"..<"603.0.0"),
   ],
   targets: [
