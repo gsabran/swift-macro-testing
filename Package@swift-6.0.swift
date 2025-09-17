@@ -18,7 +18,7 @@ let package = Package(
   ],
   dependencies: [
     // TODO: Remove this fork original supports Swift 602.x
-    .package(url: "https://github.com/gsabran/swift-snapshot-testing", revision: "88c057fd683691f5e6412136b5de4a3f94f56716"),
+    .package(url: "https://github.com/gsabran/swift-snapshot-testing", revision: "919ae5136eeeee7759568b4125b95de7c34ef60b"),
     .package(url: "https://github.com/swiftlang/swift-syntax", "509.0.0"..<"603.0.0"),
   ],
   targets: [
